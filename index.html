@@ -243,9 +243,46 @@
               </label>
 
               <label class="field" style="grid-column:1 / -1">
-                <span class="label">Phone (optional)</span>
-                <input class="input" name="buyer_phone" autocomplete="tel" placeholder="+1 555 123 4567" />
+                <span class="label">Phone (optional — include country code)</span>
+                <input
+                  class="input"
+                  name="buyer_phone"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  list="countryCodes"
+                  placeholder="+1 555 123 4567"
+                  pattern="^\\+\\d[\\d\\s\\-()]{7,}$"
+                  title="Please include country code, e.g. +1 555 123 4567"
+                />
               </label>
+
+              <datalist id="countryCodes">
+                <option value="+1">United States / Canada (+1)</option>
+                <option value="+44">United Kingdom (+44)</option>
+                <option value="+49">Germany (+49)</option>
+                <option value="+33">France (+33)</option>
+                <option value="+34">Spain (+34)</option>
+                <option value="+39">Italy (+39)</option>
+                <option value="+31">Netherlands (+31)</option>
+                <option value="+41">Switzerland (+41)</option>
+                <option value="+46">Sweden (+46)</option>
+                <option value="+48">Poland (+48)</option>
+                <option value="+7">Russia / Kazakhstan (+7)</option>
+                <option value="+81">Japan (+81)</option>
+                <option value="+82">South Korea (+82)</option>
+                <option value="+86">China (+86)</option>
+                <option value="+91">India (+91)</option>
+                <option value="+61">Australia (+61)</option>
+                <option value="+64">New Zealand (+64)</option>
+                <option value="+55">Brazil (+55)</option>
+                <option value="+52">Mexico (+52)</option>
+                <option value="+972">Israel (+972)</option>
+                <option value="+971">UAE (+971)</option>
+                <option value="+966">Saudi Arabia (+966)</option>
+                <option value="+20">Egypt (+20)</option>
+                <option value="+27">South Africa (+27)</option>
+              </datalist>
 
               <label class="field" style="grid-column:1 / -1">
                 <span class="label">Message (optional)</span>
